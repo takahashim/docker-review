@@ -7,3 +7,5 @@
 [Docker index](https://index.docker.io/u/vvakame/review/)にTrusted Buildとして置いてあるのでご活用ください。
 
 最近台頭してきたCIサービスの[drone.io](https://drone.io/)はDockerをベースにしてるため、vvakame/reviewをベースに指定すればRe:VIEWドキュメントのビルドをCIサービス上で簡単に行うことができるでしょう。
+
+※ takahashim追記: Re:VIEW用ディレクトリは/review決め打ちにして、そこにビルドスクリプトをコピーするようにしています。
