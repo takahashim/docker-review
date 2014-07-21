@@ -23,5 +23,5 @@ RUN apt-get install -y nodejs npm
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # copy build scripts and define workdir
-COPY scripts /review/scripts/
+COPY scripts /review/scripts
 WORKDIR /review
