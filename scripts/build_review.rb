@@ -71,9 +71,13 @@ Dir.chdir(path) do
   system("review-epubmaker #{Shellwords.shellescape(conf)} 2>&1")
   epubfile = bookname+".epub"
   pdffile = bookname+".pdf"
+  azw3file = bookname+".azw3"
+  system("ebook-convert #{Shellwords.shellescape(epubfile)} #{Shellwords.shellescape(azw3file)} 2>&1")
   epub = File.open(epubfile)
   pdf  = File.open(pdffile)
+  azw3 = File.open(azw3file)
   client.put_file(epubfile, epub, true)
   client.put_file(pdffile, pdf, true)
+  client.put_file(azw3file, azw3, true)
 end
 

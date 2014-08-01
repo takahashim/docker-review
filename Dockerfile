@@ -22,6 +22,9 @@ RUN gem install dropbox-sdk --no-rdoc --no-ri
 RUN apt-get install -y nodejs npm
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
+# install calibre
+RUN apt-get install -y calibre
+
 # copy build scripts and define workdir
 COPY scripts /review/scripts
 WORKDIR /review
